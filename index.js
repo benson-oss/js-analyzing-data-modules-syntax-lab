@@ -1,10 +1,12 @@
 
 
 require("datejs");
+
 function combineUsers(...args) {
     const combinedObject = {
         users: []
     };
+
     for (const usernames of args) {
 
         combinedObject.users = [
@@ -18,6 +20,7 @@ function combineUsers(...args) {
 
     return combinedObject;
 }
+
 module.exports = {
   ...(typeof combineUsers !== 'undefined' && { combineUsers })
 };
